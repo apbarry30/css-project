@@ -5,19 +5,24 @@ html {
 }
 
 body{
+  background-image: url("../img/background.png");
   font-family: 'Quattrocento', serif;
   color: #222;
   font-size: 1rem;
 }
 main{
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 25rem 2fr;
   grid-gap: 1rem;
 }
 
 div {
-  max-width: 60rem;
+  background-color: white;
   margin: 0 auto;
+  max-width: 50rem;
+  /* border: 2px orange solid; */
+
 }
 
 a {
@@ -36,29 +41,43 @@ h1, h2 {
   margin: .5rem;
 }
 
+h1{
+  text-align: center;
+}
+
+h2::first-letter{
+  font-size: 1.75rem;
+}
 
 
 img {
   border: 1px solid rgb(253, 189, 129);
   box-shadow: 0.1rem 0.1rem 0.25rem rgb(253, 189, 129);
   width: 100%;
+
 }
 
 
 section:first-child {
   grid-row: 1;
-  margin-top: 0;
+  margin-top: .5rem ;
+  margin-left: 4rem;
+
 
 }
 
 section:nth-child(2) {
+
   grid-row: 1 / 2;
-  margin: 1.5rem 0 0 .5rem;
+  margin: 1.5rem 0 0 3rem;
+
 }
 
 section:last-child {
   grid-column:  1/ span 2;
   max-width: 45rem;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
 
 }
 
@@ -84,7 +103,7 @@ p > img {
 }
 
 p:last-child{
-  margin-left: .5rem;
+  margin-left: 1rem;
 }
 
 p > strong {
@@ -104,10 +123,59 @@ footer em {
 }
 
 footer  p:first-child {
-  margin: 1rem 0 0 .5rem;
+  margin: 1rem 0 0 1rem;
 }
 
 footer p:first-child:before {
   content: "Source: ";
   font-style: italic;
+}
+
+@media(max-width:400px){
+  body{
+    background-image:none;
+  }
+
+  div{
+    border: 2px blue solid;
+  }
+  main{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+  section:first-child{
+    margin: 0 auto;
+    /* display:none; */
+  }
+  section:nth-child(2) {
+    margin: 0 auto;
+    grid-row: 2;
+  }
+
+  section:last-child {
+    grid-column:  1;
+    max-width: 45rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+
+
+}
+/*
+@media(max-width:800px){
+
+} */
+
+@media print {
+  body{
+    background-image:none;
+  }
+  img {
+    filter: grayscale();
+  }
+  section:last-child{
+    display:none;
+  }
 }
