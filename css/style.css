@@ -281,6 +281,10 @@ footer p:first-child:before {
     grid-row: 2;
   }
 
+  section:last-child p{
+    font-weight: normal;
+  }
+
 
   body{
     font-size: .7rem;
@@ -310,6 +314,10 @@ footer p:first-child:before {
 
   main p:last-child em {
     font-size: 0.55rem;
+  }
+
+  h1, h2 {
+    font-weight: normal;
   }
 
 
