@@ -294,12 +294,18 @@ footer p:first-child:before {
    background-color: white;
   }
 
-  footer{
+  footer p{
     font-size: .55rem;
     margin-top: .2rem;
   }
+
   [href="https://catalog.hathitrust.org/Record/102384364"]::after{
     content: " (https://catalog.hathitrust.org/Record/102384364)";
+    color: #222;
+  }
+
+  a:last-child{
+    color: #222;
   }
 
   main p:last-child em {
