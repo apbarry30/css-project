@@ -8,7 +8,7 @@ html {
 }
 
 body{
-  background-image: url("../img/background.png");
+  background-image: url("../img/background.jpg");
   font-family: 'Quattrocento', serif;
   color: #222;
   font-size: 1rem;
@@ -208,11 +208,14 @@ footer p:first-child:before {
 
   section:first-child{
     grid-column: 1;
+    grid-row:1;
     margin-left: 0;
+    margin-top: 0;
   }
 
   section:nth-child(2){
     grid-column: 1;
+    grid-row: 2;
     margin: 0 auto;
     margin-left: .5rem;
   }
@@ -227,16 +230,69 @@ footer p:first-child:before {
   }
 
   div{
-    background-color: rgb(253, 189, 129);
+    background-color: rgb(250, 240, 190);
   }
 
 }
 
 @media print {
+  [alt="pumpkinpie1"]{
+    display:none;
+  }
+  [alt="pumpkinpie2"]{
+    display: block;
+    filter: grayscale();
+    max-width: 360px;
+  }
+
+  header{
+    background-color: rgb(245, 106, 32);
+  }
+
+  h1{
+    font-size:2rem;
+  }
+
+  main {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-gap: 1rem;
+  }
+
+  section:first-child {
+    grid-column: 1;
+    grid-row: 1;
+    margin-right: .25rem;
+
+  }
+  section:nth-child(2){
+    grid-column: 2;
+    grid-row: 1;
+    margin-left: 1.5rem;
+  }
+
+  section:last-child{
+    margin-left: 1.5rem;
+    max-width: 42rem;
+  }
+  section:last-child p{
+    margin-left: 1.5rem;
+  }
 
   body{
-    background-image:none;
+    font-size: .85rem;
+    background-image: none;
+    background-color: rgb(253, 189, 129);
+
   }
-  img {
-    filter: grayscale();
+
+ div{
+   margin: 0 auto;
+   background-color: white;
+ }
+  [href="https://catalog.hathitrust.org/Record/102384364"]::after{
+    content: " (https://catalog.hathitrust.org/Record/102384364)";
+  }
+
 }
