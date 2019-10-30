@@ -3,6 +3,9 @@
 html {
   font-size: 16px;
 }
+[alt="pumpkinpie2"]{
+  display:none;
+}
 
 body{
   background-image: url("../img/background.png");
@@ -13,7 +16,7 @@ body{
 main{
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 25rem 2fr;
+  grid-template-columns: 2fr;
   grid-gap: 1rem;
 }
 
@@ -35,95 +38,96 @@ a:hover {
   background-color: rgb(253, 189, 129);
 }
 
+
 h1, h2 {
   font-family: 'Noto Serif', serif;
   font-weight: 800;
-  margin: .5rem;
 }
 
-h1{
+/* h1{
   text-align: center;
-}
+} */
 
 h2::first-letter{
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 
 img {
-  border: 1px solid rgb(253, 189, 129);
-  box-shadow: 0.1rem 0.1rem 0.25rem rgb(253, 189, 129);
-  width: 100%;
+  border: 2px solid rgb(253, 189, 129);
+
+  /* box-shadow: 0.1rem 0.1rem 0.25rem rgb(253, 189, 129); */
+  /* width: 100%; */
 
 }
 
 
 section:first-child {
-  grid-row: 1;
-  margin-top: .5rem ;
-  margin-left: 4rem;
-
-
+  grid-column: 2;
+  margin-top: 2.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 section:nth-child(2) {
-
-  grid-row: 1 / 2;
-  margin: 1.5rem 0 0 3rem;
+  grid-row: 1 ;
+  margin: 1.25rem 0 0 3rem;
 
 }
 
 section:last-child {
   grid-column:  1/ span 2;
-  max-width: 45rem;
-  margin-left: 1.5rem;
-  margin-top: 1rem;
-
+  margin-left: 3rem;
+  margin-top: .5rem;
+  margin-right: .5rem;
 }
 
 section:last-child li {
   line-height: 1.5;
 }
 
+
+
 ul > li {
     line-height: 1.5
 }
 
-header > h1 {
-  font-size: 2.5rem;
+h1 {
+  font-size: 3rem;
+  margin-left: 1.5rem;
+}
+
+header{
+    background-color: rgb(253, 189, 129);
+}
+
+
+section:first-child p{
   margin: 0;
-}
-
-section > p{
-  margin: 0.25rem;
-}
-
-p > img {
-  margin-top: 2rem;
-}
-
-p:last-child{
-  margin-left: 1rem;
 }
 
 p > strong {
   font-family: 'Noto Serif', serif;
 }
 
-em {
-  margin: 0;
+main p:last-child em {
+  display: block;
+  margin-right: 1.5rem;
+  text-align: right;
   font-size: 0.75rem;
 }
 
 footer{
+  margin-top: 1.5rem;
+  text-align: right;
   font-size: 0.875rem;
 }
-footer em {
-  font-size: 0.875rem;
+footer:last-child em {
+  display:inline;
 }
-
 footer  p:first-child {
-  margin: 1rem 0 0 1rem;
+  margin: 1rem 0.5rem 0.5rem 1.5rem;
+  display:inline;
 }
 
 footer p:first-child:before {
@@ -131,51 +135,108 @@ footer p:first-child:before {
   font-style: italic;
 }
 
-@media(max-width:400px){
+
+@media(max-width:770px){
+
+  [alt="pumpkinpie1"]{
+    display:none;
+  }
+  [alt="pumpkinpie2"]{
+    display: block;
+  }
+
+  header{
+    background-color: rgb(245, 106, 32);
+  }
+
+  main {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-gap: 1rem;
+  }
+
+  section:first-child {
+    grid-column: 2;
+    margin-right: .25rem;
+
+  }
+  section:nth-child(2){
+    margin-left: 1.5rem;
+  }
+
+  section:last-child{
+    margin-left: 1.5rem;
+    max-width: 42rem;
+  }
+  section:last-child p{
+    margin-left: 1.5rem;
+  }
+
+  body{
+    background-image: none;
+    background-color: rgb(253, 189, 129);
+
+  }
+
+ div{
+   margin: 0 auto;
+   background-color: white;
+   /* border: rgb(245, 106, 32) 3px solid; */
+ }
+}
+
+
+
+@media(max-width: 380px){
+
+  [alt="pumpkinpie1"]{
+    display:none;
+  }
+
+  [alt="pumpkinpie2"]{
+    margin: 0 auto;
+    width:100%;
+  }
+
+  main {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns:1fr;
+  }
+
+
+  section:first-child{
+    grid-column: 1;
+    margin-left: 0;
+  }
+
+  section:nth-child(2){
+    grid-column: 1;
+    margin: 0 auto;
+    margin-left: .5rem;
+  }
+
+  section:last-child{
+    grid-column: 1;
+    margin:0 .25rem 0 .5rem;
+  }
   body{
     background-image:none;
+    background-color: white;
   }
 
   div{
-    border: 2px blue solid;
+    background-color: rgb(253, 189, 129);
   }
-  main{
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
-  }
-  section:first-child{
-    margin: 0 auto;
-    /* display:none; */
-  }
-  section:nth-child(2) {
-    margin: 0 auto;
-    grid-row: 2;
-  }
-
-  section:last-child {
-    grid-column:  1;
-    max-width: 45rem;
-    margin: 0 auto;
-    margin-top: 1rem;
-  }
-
 
 }
-/*
-@media(max-width:800px){
-
-} */
 
 @media print {
+
   body{
     background-image:none;
   }
   img {
     filter: grayscale();
-  }
-  section:last-child{
-    display:none;
-  }
 }
