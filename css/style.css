@@ -188,7 +188,7 @@ footer p:first-child:before {
 
 
 
-@media(max-width: 380px){
+@media(max-width: 400px){
 
   [alt="pumpkinpie1"]{
     display:none;
