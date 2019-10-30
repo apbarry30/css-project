@@ -125,6 +125,7 @@ footer{
 footer:last-child em {
   display:inline;
 }
+
 footer  p:first-child {
   margin: 1rem 0.5rem 0.5rem 1.5rem;
   display:inline;
@@ -262,37 +263,47 @@ footer p:first-child:before {
 
   section:first-child {
     grid-column: 1;
-    grid-row: 1;
+    grid-row: 1/ span 2;
+    margin-top: 2.2rem;
     margin-right: .25rem;
 
   }
   section:nth-child(2){
+    margin-left: 0;
     grid-column: 2;
     grid-row: 1;
-    margin-left: 1.5rem;
   }
 
   section:last-child{
-    margin-left: 1.5rem;
-    max-width: 42rem;
+    margin-top: 0;
+    margin-left: 0;
+    grid-column: 2;
+    grid-row: 2;
   }
-  section:last-child p{
-    margin-left: 1.5rem;
-  }
+
 
   body{
-    font-size: .85rem;
+    font-size: .7rem;
     background-image: none;
     background-color: rgb(253, 189, 129);
-
   }
 
  div{
    margin: 0 auto;
    background-color: white;
- }
+  }
+
+  footer{
+    font-size: .55rem;
+    margin-top: .2rem;
+  }
   [href="https://catalog.hathitrust.org/Record/102384364"]::after{
     content: " (https://catalog.hathitrust.org/Record/102384364)";
   }
+
+  main p:last-child em {
+    font-size: 0.55rem;
+  }
+
 
 }
